@@ -1,0 +1,24 @@
+{
+  "name": "eat-the-burger",
+  "version": "1.0.0",
+  "description": "Eating a burger app.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thuynguyen-nht/eat-the-burger.git"
+  },
+  "author": "ThuyN",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thuynguyen-nht/eat-the-burger/issues"
+  },
+  "homepage": "https://github.com/thuynguyen-nht/eat-the-burger#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.3",
+    "mysql": "^2.18.1"
+  }
+}

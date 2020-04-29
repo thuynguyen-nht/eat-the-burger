@@ -1,0 +1,47 @@
+<div class="container text-center">
+
+    <img src="/assets/img/67422-king-hamburger-cheeseburger-veggie-burger-drawing.png" alt="Burger_image">
+
+    <h1>Eat-Da-Burger!</h1>
+
+    <ul>
+        {{#each burgers}}
+
+        {{#if devoured}}
+
+        <div class="row">
+            <div class="col-md">
+                <p>{{id}}. {{burger_name}}</p>
+            </div>
+            <div class="col-md"></div>
+        </div>
+
+        {{else}}
+        <div class="row">
+            <div class="col-md">
+
+            </div>
+            <div class="col-md">
+                </p>{{id}}. {{burger_name}}
+                <button class="change-devour" data-id="{{id}}">
+                    DEVOUR IT!
+                </button>
+                <p>
+            </div>
+        </div>
+
+
+        {{/if}}
+
+        {{/each}}
+    </ul>
+
+    <form class="create-form">
+        <div class="form-group">
+
+            <textarea class="form-control" id="burger-input" rows="2"></textarea>
+            <label for="burger-input">Enter a burger you want to eat & Click the "Submit" button</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

@@ -3,38 +3,33 @@
     <img src="/assets/img/67422-king-hamburger-cheeseburger-veggie-burger-drawing.png" alt="Burger_image">
 
     <h1>Eat-Da-Burger!</h1>
-
-    <ul>
-        {{#each burgers}}
-
-        {{#if devoured}}
-
-        <div class="row">
-            <div class="col-md">
-                <p>{{id}}. {{burger_name}}</p>
-            </div>
-            <div class="col-md"></div>
-        </div>
-
-        {{else}}
-        <div class="row">
-            <div class="col-md">
-
-            </div>
-            <div class="col-md">
+    <div class="row">
+        <div class="col-md">
+            <ul>
+                {{#each burgers}}
+                {{#unless devoured}}
                 </p>{{id}}. {{burger_name}}
                 <button class="change-devour" data-id="{{id}}">
                     DEVOUR IT!
                 </button>
                 <p>
-            </div>
+                    {{/unless}}
+                    {{/each}}
+            </ul>
         </div>
 
+        <div class="col-md">
+            <ul>
+                {{#each burgers}}
+                {{#if devoured}}
+                {{> burgers/burger-block devoured=true}}
+                {{/if}}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
 
-        {{/if}}
 
-        {{/each}}
-    </ul>
 
     <form class="create-form">
         <div class="form-group">

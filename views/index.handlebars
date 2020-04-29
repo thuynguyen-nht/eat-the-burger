@@ -1,20 +1,24 @@
 <div class="container text-center">
 
-    <img src="/assets/img/67422-king-hamburger-cheeseburger-veggie-burger-drawing.png" alt="Burger_image">
+    <img class="img-fluid" src="/assets/img/67422-king-hamburger-cheeseburger-veggie-burger-drawing.png"
+        alt="Burger_image">
 
     <h1>Eat-Da-Burger!</h1>
     <div class="row">
         <div class="col-md">
             <ul>
+
                 {{#each burgers}}
                 {{#unless devoured}}
-                </p>{{id}}. {{burger_name}}
-                <button class="change-devour" data-id="{{id}}">
-                    DEVOUR IT!
-                </button>
-                <p>
-                    {{/unless}}
-                    {{/each}}
+
+                <p>{{id}}. {{burger_name}}
+                    <button class="change-devour btn btn-warning" data-id="{{id}}">
+                        DEVOUR IT!
+                    </button>
+                </p>
+
+                {{/unless}}
+                {{/each}}
             </ul>
         </div>
 
@@ -37,6 +41,6 @@
             <textarea class="form-control" id="burger-input" rows="2"></textarea>
             <label for="burger-input">Enter a burger you want to eat & Click the "Submit" button</label>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-warning">Submit</button>
     </form>
 </div>

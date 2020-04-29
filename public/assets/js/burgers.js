@@ -2,23 +2,32 @@ $(function () {
     $(".create-form").on("submit", function (event) {
         // Make sure to preventDefault on a submit event.
         event.preventDefault();
-
-        var newBurger = {
-            burger_name: $("#burger-input").val().trim(),
-            devoured: "0"
-        };
-
-        // Send the POST request.
-        $.ajax("/api/burgers", {
-            type: "POST",
-            data: newBurger
-        }).then(
-            function () {
-                console.log("New Burger added.");
-                // Reload the page to get the updated list
-                location.reload();
+        function validationForm() {
+            var isValid = true;
+            if ($("#burger-input").val() == "") {
+                isValid = false;
             }
-        );
+            return isValid;
+        }
+        if (validationForm()) {
+            var newBurger = {
+                burger_name: $("#burger-input").val().trim(),
+                devoured: "0"
+            };
+            // Send the POST request.
+            $.ajax("/api/burgers", {
+                type: "POST",
+                data: newBurger
+            }).then(
+                function () {
+                    console.log("New Burger added.");
+                    // Reload the page to get the updated list
+                    location.reload();
+                }
+            );
+        } else {
+            alert("PLease enter burger you like!")
+        }
     });
 
     $(".change-devour").on("click", function (event) {

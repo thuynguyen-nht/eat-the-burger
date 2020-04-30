@@ -25,7 +25,7 @@ First, this section creates connection between server and database. Also, it als
 
 This is routing and direct api routes using express.
 
-3. View
+3. View contains:
 
 - main and index handlebars files
 - burgers.js
@@ -33,4 +33,4 @@ This is routing and direct api routes using express.
 Their role are to take care of front end browser where all html is being display to viewer. They are using jquery and ajax to communication with server and handlebars to generate HTML.
 
 ### Heroku Demo
-[Eat-Da-Burger](http://github.com)
+[Eat-Da-Burger](https://nameless-badlands-10287.herokuapp.com/burgers)
